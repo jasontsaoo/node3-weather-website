@@ -14,10 +14,9 @@ const forecast = (latitude,longitude,callback)=>
         }
         else
         {
-            callback(undefined,{
-                temperature:body.current.temperature,
-                feeltemp:body.current.feelslike
-            })
+            callback(undefined,
+                "today's temperature is: " + body.current.temperature+"but feels like: "+body.current.feelslike+" humidity is: "+body.current.humidity
+            )
         }
     })
 }
